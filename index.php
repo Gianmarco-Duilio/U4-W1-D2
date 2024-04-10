@@ -16,7 +16,7 @@ if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
 if(strlen($password) < 6) {
     $errors['password'] =  'Password troppo corta!';
 }
-if(strlen($age)> 18) {
+if($age<18) {
     $errors['age'] =  'Non sei maggiorenne!';
 }
 
